@@ -18,6 +18,7 @@ function setAsNextField(field){
   
   var charCodes = new Set([9, 10, 11, 12, 13, 28, 29, 30, 31, 32, 133, 160, 5760, 8192, 8193, 8194, 8195, 8196, 8197, 8198, 8199, 8200, 8201, 8202, 8232, 8233, 8239, 8287, 12288]);
 
+
   for (var i = 0; i < field.length; i++) {
       if (charCodes.has(field.charCodeAt(i))==false) {
         return true;
@@ -62,21 +63,21 @@ function findStartIndicies(string, field, searchStartIndex, firstOnly = true) {
 
 function getFieldIValues(source, fields) {
   var searchStartIndex = 0;
-  var results = {}
+  var results = {};
   var lastFieldName = null;
   var lastFieldIndicies = null;
 
   for (var i = 0; i <fields.length; i++) {
 
     field = fields[i];
-    
+
     var currentIndicies = findStartIndicies(source.substring(searchStartIndex), field, searchStartIndex);
 
     var indiciesCount = currentIndicies.length;
 
     if (indiciesCount > 0) {
 
-      searchStartIndex+= currentIndicies[0][1];
+      searchStartIndex = currentIndicies[0][1];
 
       if (lastFieldName != null && lastFieldIndicies != null) {
           var lastIndiciesCount = lastFieldIndicies.length;
