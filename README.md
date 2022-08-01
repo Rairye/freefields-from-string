@@ -1,10 +1,18 @@
 # freefields-from-string
-Code for extracting field-like text from unformatted strings
+Code for extracting field-like text from unformatted strings.
 
-## Sample 
+## Sample using get_fields.js
+
+Note: The fields must be specified in order. The text is case-sensensitive. 
+
 
 ```javascript
 
+source = "Product: My product Price: 45 Qty: 3"
+fields = ["Product:", "Price:", "Qty:"]
+values = getFieldIValues(source, fields);
+
+console.log(values);
 
 
 ```
