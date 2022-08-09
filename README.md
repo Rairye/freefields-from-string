@@ -3,7 +3,7 @@ Code for extracting field-like text from unformatted strings.
 
 ## Sample using get_fields.js
 
-Note: The fields must be specified in order. The text is case-sensensitive. 
+Note: The fields must be specified in order. The text is case-sensitive. 
 
 
 ```javascript
